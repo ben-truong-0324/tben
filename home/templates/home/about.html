@@ -1,60 +1,12 @@
-{% extends 'base.html' %} {% load static %} {% block head %}{% endblock head %} {% block title %}ConnectNGive - About{% endblock %} {% block content %}
+{% extends 'base.html' %} {% load static %} {% block head %}{% endblock head %} {% block title %}Ben Truong - About{% endblock %} {% block content %}
 {% load staticfiles %}
-<link rel="stylesheet" type="text/css" href="{% static 'home/style_about.min.css' %}">
-<div id="aboutContainer" class="container">
+<div class="container mt-5">
 	<div class="row">
-		<div class="col-12 pb-5">
-			<h2 class="text-center">About Us</h2>
-			<div class="purple-bar"></div>
-			<h3 class="text-center pt-4">ConnectNGive is for<br>real-time COVID-19 Shortages & Donations</h3>
+		<div class="col-12 text-center">
+			<h1>
+				About me
+			</h1>
 		</div>
 	</div>
-	
-	<div class="row pt-5">
-		<div class="col-12 pb-5">
-			<h2 class="text-center">How do we help?</h2>
-		</div>
-	</div>
-	<div id="whatWeDoWrapper" class="row pb-5">
-		<div class="col-12 col-lg-4">
-			<div class="stepsBox mb-5" style="min-height:420px;height:auto">
-				<h4>1. Hotspots &<br> Shortages</h4>
-				<p>Posted requests are mapped alongside most current COVID-19 data</p>
-				<img src="{% static 'home/aboutx1.PNG' %}" style="width:100%;">
-			</div>
-		</div>
-		<div class="col-12 col-lg-4" >
-			<div class="stepsBox mb-5" style="min-height:420px;height:auto">
-				<h4>2. Always<br> Real-time</h4>
-				<p>Verify up-to-date needs of your recipients by each items without hassle or delay
-				</p>
-				<img src="{% static 'home/aboutx2.PNG' %}" style="width:100%;">
-			</div>
-		</div>
-		<div class="col-12 col-lg-4" >
-			<div class="stepsBox mb-5" style="min-height:420px;height:auto">
-				<h4>3. Manage &<br> Coordinate</h4>
-				<p>Update, collaborate, and track all requests and donations openly and efficiently</p>
-				<img src="{% static 'home/aboutx3.PNG' %}" style="width:100%;">
-			</div>
-		</div>
-	</div>
-	<div class="row py-5">
-		<div class="col-12 pb-5 text-center">
-			<h2 class="text-center">Meet the Team</h2>
-			<p>Want to join the team?</p>
-			<div><a href="{% url 'home:contact' %}" class="btn btn-primary">Contact Us</a></div>
-		</div>
-	</div>
-	<div class="row"> {% for m in members %} <div class="col-12 col-sm-6 mb-5">
-			<div class="row">
-				<div class="col-5">
-					<img src="{{m.image.url}}" style="width: 100%" />
-				</div>
-				<div class="col-7">
-					<p><b>{{m.name}}</b><br>{{m.role}}<br>{{m.city}}, {{m.state}}</p>
-					<p class="pt-2">{{m.description}}</p>
-				</div>
-			</div>
-		</div> {% empty %} {% endfor %} </div>
-</div>{% endblock content %}
+</div>
+{% endblock content %}

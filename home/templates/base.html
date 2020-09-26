@@ -60,86 +60,9 @@
     </div>
   </nav>
   
-  <br></br>
-  <script>
-    function showGuide_Have(e) {
-      $('#steps_need').addClass('d-none');
-      $('#steps_have').removeClass('d-none');
-      $('#btnSteps_Have').addClass('active');
-      $('#btnSteps_Need').removeClass('active');
-    }
-
-    function showGuide_Need(e) {
-      $('#steps_need').removeClass('d-none');
-      $('#steps_have').addClass('d-none');
-      $('#btnSteps_Have').removeClass('active');
-      $('#btnSteps_Need').addClass('active');
-    }
-  </script>
-
-  <div class="container d-block mt-2">
-    <div class="row intro-bg w-100">
-    </div>
-    <div class="row intro-text w-100 p-4 text-center">
-      <h2 class="w-100 text-center">
-        Hi I'm Ben 👋
-      </h2>
-      <h2 class="w-100 text-center bold">
-        An aspiring computer engineer in the Bay Area!
-      </h2>
-    </div>
-  </div>
-
-  <div id="howToWrapper" class="container d-block mb-5" >
-    <div class="row">
-      <div class="col-12 text-center">
-        <h2>Check out my 
-          <a href="/">👉resume</a>
-          <br></br>
-          or my websites below</h2>
-      </div>
-      <div class="col-12 text-center mt-3 mb-5">
-        <button id="btnSteps_Have" class="btn btn-outline-primary active" onClick="showGuide_Have(this)">ConnectNGive.org</button>
-        <button id="btnSteps_Need" class="btn btn-outline-secondary" onClick="showGuide_Need()">Apella.ai</button>
-      </div>
-    </div>
-    <div id="steps_have" class="row">
-      <div class="col-6">
-        <div class="">
-          <img src="{% static 'images/cngpic1.PNG' %}" class="w-100">
-        </div>
-      </div>
-      <div class="col-6">
-        <div class="">
-          <img src="{% static 'images/cngpic2.PNG' %}" class="w-100">
-          
-        </div>
-      </div>
-      <div class="col-12 text-center mt-5">
-        <h2>Rapid PPEs requests<br>for community clinics</h2>
-        <p>By building an app to help manage PPE requests<br> to reduce time-till-delivery of critical emergency responses resources,<br> ConnectNGive ensures<br> timely fulfillment of PPEs to frontline services in our communities.</p>
-        <a href="https://www.connectngive.org" target="_blank">Visit ConnectNGive.org</a>
-      </div>
-    </div>
-    <div id="steps_need" class="row d-none">
-      <div class="col-6">
-        <div class="">
-          <img src="{% static 'images/apellapic1.PNG' %}" class="w-100">
-        </div>
-      </div>
-      <div class="col-6">
-        <div class="">
-          <img src="{% static 'images/apellapic2.PNG' %}" class="w-100">
-          
-        </div>
-      </div>
-      <div class="col-12 text-center mt-5">
-        <h2>Decide your vote<br>in under 1 minute</h2>
-        <p>By using Natural Language Processing<br> to produce simple insights from official documents and analysts/activists reviews,<br> Apella seeks to inform voters<br> about what officials are doing and which groups support them.</p>
-        <a href="http://www.apella.ai" target="_blank">Visit Apella.ai</a>
-      </div>
-    </div>
-  </div>
+  {% block content %}
+  {% endblock content %}  
+  
   <div class="container w-bar "></div>
   <footer class="container">
     <div class="row">
