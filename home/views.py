@@ -11,7 +11,7 @@ from django.utils import timezone
 from django.conf import settings
 from django.urls import reverse_lazy
 from django.db.models import Q 
-# from .forms import  ContactForm, TeamMemberForm,HIWForm
+from .forms import  ContactForm
 from django.core.mail import EmailMessage
 
 MAPBOX_TOKEN = settings.MAPBOX_TOKEN
@@ -60,10 +60,30 @@ def resume(request):
   return render(request, 'home/resume.html',context)
 
 def contact(request):
-  context = {
-  }
-  return render(request, 'home/contact.html',context)
+    if request.method == 'GET':
+        form = ContactForm()
+    else:
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            mail_subject = form.cleaned_data['subject']
+            from_email = form.cleaned_data['from_email']
+
+            
+            message = form.cleaned_data['message'] 
+            message += " from " + from_email
+            try:
+                email = EmailMessage(
+                    mail_subject, message, to=['ben.truong.0324@gmail.com']
+                   )
+                email.send()
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+            
+            return redirect('home:contactSuccess')
+    return render(request, "home/contact.html"
+      , {'form': ContactForm}
+      )
+
+
 def contactSuccess(request):
-  context = {
-  }
-  return render(request, 'home/contactSuccess.html',context)
+    return render(request, 'home/contactSuccess.html')
