@@ -2,8 +2,12 @@
   id="recipientContainer" class="container-fluid"></div> {% load staticfiles %} 
 <!-- background -->
 <div id="signUpContainer" class="container mt-5 mb-5">
-  <div class="col-12 offset-sm-4 col-sm-5 px-0">
-    <embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=http://truongben.com/static/images/BenTruong.pdf" width="500" height="375">
+  <div class="col-12 offset-sm-4 col-sm-5 px-0 " >
+    <embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://truongben.com/static/images/BenTruong.pdf" width="600" height="700">
+    <a href="https://truongben.com/static/images/BenTruong.pdf" target="_blank" class="btn btn-primary mt-4" id="download" >Download PDF</a>
   </div>
+  
 </div>
+<link rel="stylesheet" type="text/css" href="{% static 'home/style_auth.css' %}">
+
 {% endblock content %}
