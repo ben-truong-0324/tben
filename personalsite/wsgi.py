@@ -9,9 +9,9 @@ https://docs.djangoproject.com/en/2.2/howto/deployment/wsgi/
 import os
 from django.core.wsgi import get_wsgi_application
 if os.environ.get('IS_PRODUCTION') or os.environ.get('IS_STAGING'):
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'PIVOTaid.settings.production')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'personalsite.settings.production')
 else:
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'PIVOTaid.settings.development')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'personalsite.settings.development')
 
 application = get_wsgi_application()
  
