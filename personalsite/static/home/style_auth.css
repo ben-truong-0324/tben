@@ -1,0 +1,65 @@
+#signUpContainer {
+    margin-top: 180px;
+  }
+  #signUpContainer h2 {
+    font-weight: 700 !important;
+    margin-bottom: 60px;
+  }
+
+  #signUpContainer label {
+    display: inline-block;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  #signUpContainer input[type=text],
+  #signUpContainer input[type=password],
+  #signUpContainer input[type=number],
+  #signUpContainer select,
+  #signUpContainer textarea {
+    margin-bottom: 35px !important;
+  }
+
+  #signUpContainer input {
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    border-bottom: 2px solid #000;
+    padding: 15px 0;
+  }
+
+  #signUpContainer textarea {
+    border: 2px solid #000;
+    margin-top: 9px;
+    width: 100%;
+    padding: 15px;
+}
+#signUpContainer select {
+  border: 2px solid #000;
+  margin-top: 9px;
+  width: 100%;
+  padding: 20px;
+}
+
+  #signUpContainer #forgotPasswordWrapper {
+    margin-top: -30px !important;
+  }
+#forgotPasswordWrapper a {
+  color: #000;
+  font-weight: 700;
+}
+  #signUpContainer #submitWrapper {
+    margin-top: 40px;
+  }
+
+  #signUpContainer #signUpWrapper {
+    margin-top: 30px;
+    font-weight: 700;
+  }
+
+  /***** Mobile Viewport *****/
+  @media (max-width: 544px) {
+    #signUpContainer {
+      margin-top: 130px !important;
+    }
+  }
